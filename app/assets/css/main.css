@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose {
+  --tw-prose-body: var(--color-taupe-800);
+  --tw-prose-headings: var(--color-taupe-900);
+  --tw-prose-lead: var(--color-taupe-600);
+  --tw-prose-links: var(--color-taupe-600);
+  --tw-prose-bold: var(--color-taupe-900);
+  --tw-prose-counters: var(--color-taupe-500);
+  --tw-prose-bullets: var(--color-taupe-400);
+  --tw-prose-hr: var(--color-taupe-200);
+  --tw-prose-quotes: var(--color-taupe-700);
+  --tw-prose-quote-borders: var(--color-taupe-300);
+  --tw-prose-captions: var(--color-taupe-500);
+  --tw-prose-code: var(--color-taupe-800);
+  --tw-prose-pre-code: var(--color-taupe-800);
+  --tw-prose-pre-bg: var(--color-taupe-100);
+  --tw-prose-th-borders: var(--color-taupe-300);
+  --tw-prose-td-borders: var(--color-taupe-200);
+}
+
+@media print {
+  body { background: white; }
+  .print-hidden { display: none !important; }
+  .print-container {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .print-container main,
+  .print-container main > div {
+    height: auto !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+    flex: none !important;
+  }
+  .print-scroll {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
